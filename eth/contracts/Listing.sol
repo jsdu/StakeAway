@@ -1,8 +1,8 @@
 pragma solidity ^0.5.0;
-import "./Lending.sol";
+import "./Services/DSRLending.sol";
 
 // An implementation of handling automated listings
-contract ListingManager is Lending {
+contract ListingManager is DSRLending {
     struct Listing {
         uint256 price; // Token balance
         uint256 timestamp; // timestamp until listing is available again
@@ -88,7 +88,8 @@ contract ListingManager is Lending {
         listing.renter = msg.sender;
 
         // Stores the timelocked balance in the owner account
-        _transfer(listing.owner, price, price * stakeMultiplier, _duration);
+        _transfer(listing.owner, price, _duration);
+        _transfer(msg.sender, price * stakeMultiplier, _duration);
 
         emit listingBooked(_id, price, _isBooked(listing.timestamp), listing.renter, listing.owner);
     }
