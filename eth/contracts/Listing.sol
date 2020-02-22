@@ -1,9 +1,8 @@
 pragma solidity ^0.5.0;
 import "./Lending.sol";
-import "./Reputation.sol";
 
 // An implementation of handling automated listings
-contract ListingManager is Lending, Reputation {
+contract ListingManager is Lending {
     struct Listing {
         uint256 price; // Token balance
         uint256 timestamp; // timestamp until listing is available again

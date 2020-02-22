@@ -79,7 +79,7 @@ contract Lending is Account, DSR, iDAI {
         if (lendingType == LendingType.DSR) {
             _exit(_balance);
         } else if (lendingType == LendingType.iDAI) {
-            _burn(address(this), _balance);
+            _burn(_balance);
         }
     }
     

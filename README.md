@@ -12,3 +12,9 @@ A layer one protocol for Ethereum that allows smart contract owners the ability 
 
 
 **Interest Rate risk** — interest rates on these lending platforms are variable, meaning they can fluctuate even after you have deposited money or taken out a loan. This means that as a depositor you may earn less than the interest rate you saw at the time you deposited, or that as a borrower you will be responsible for paying a much higher interest rate than you saw when you first borrowed money.
+
+# TODO:
+
+- Integrate with Compound [cTokens]
+
+- Integrate with Aave [aTokens]

@@ -21,7 +21,7 @@ contract Timestamp is Ownable {
     }
 }
 
-// A protocol that keeps track of the balance of an account.
+// A contract that keeps track of the balance of an account.
 // The account balance can be timelocked for the contract owner to earn interest for the duration
 contract Account is Timestamp {
     
