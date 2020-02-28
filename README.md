@@ -5,6 +5,28 @@
 
 A layer one protocol for Ethereum that allows smart contract owners the ability to earn interest off of the balance in their smart contracts.
 
+# How to use
+
+Integrating is straightforward. Import either `DSRLending` or `FulcrumLending` into your Dapp.
+
+From there, whenever you accept an ERC20 token within your smart contract, replace the following code 
+
+```
+erc20ContractInterface.transferFrom(_from, _to, _value)
+```
+
+with 
+
+```
+_transfer(address _to, uint256 _value, uint256 _duration)
+```
+
+The user that receives the token can then withdraw the underlying balance through
+
+```
+function withdraw() public
+```
+
 # Risks
 
 **Technical risk** — These smart contracts have not been audited or tested thoroughly and thus not ready for main net use. Furthermore, DeFi is still relatively new and could have bugs or security vulnerabilities.
