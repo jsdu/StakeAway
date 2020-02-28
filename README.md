@@ -27,6 +27,8 @@ The user that receives the token can then withdraw the underlying balance throug
 function withdraw() public
 ```
 
+For additional reference, please see the example app `Listing.sol`
+
 # Risks
 
 **Technical risk** — These smart contracts have not been audited or tested thoroughly and thus not ready for main net use. Furthermore, DeFi is still relatively new and could have bugs or security vulnerabilities.
